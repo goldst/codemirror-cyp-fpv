@@ -1,0 +1,385 @@
+
+a {
+    color: #0065bd ;
+  }
+  
+  a:visited {
+    color: #6201c6 ;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-variant: small-caps ;
+  }
+  
+  h3 {
+    border-bottom: 1px solid black ;
+  }
+  
+  ul {
+    padding: 5px ;
+    padding-left: 20px ;
+  }
+  
+  dl {
+    padding: 5px ;
+  }
+  
+  hr {
+    display: none ;
+  }
+  
+  img {
+    border: 0px ;
+  }
+  
+  html {
+    background: lightgrey ;
+  }
+  
+  body {
+    padding: 0px ;
+    width: 960px ;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-top: 0px ;
+    margin-bottom: 0px ;
+    
+    background: white ;
+  }
+  
+  a {
+    text-decoration: none ;
+  }
+  
+  .mission {
+    text-align: center ;
+    width: 100% ;
+    font-size: 75% ;
+    font-style: italic ;
+  }
+  
+  .logo.left {
+    float: left;
+  }
+  
+  .logo.right {
+    float: right;
+  }
+  
+  #header {
+    position: relative ;
+    margin: 0px ;
+    padding: 0px ;  
+    background: #0065bd ;
+  }
+  
+  #header h1 {
+    margin: 0px ;
+    margin-right: 268px ;
+    padding: 10px ;
+    padding-left: 10px ;
+    padding-bottom: 10px ;
+    min-height: 64px;
+  }
+  
+  #header h2 {
+    margin: 0px ;
+    margin-right: 268px ;
+    padding: 10px ;
+    padding-left: 10px ;
+    padding-bottom: 10px ;
+  
+    text-align: center ;
+  }
+  
+  #isabelle_logo {
+    position: absolute ;
+    right: 194px ;
+    top: 4px ;
+  }
+  
+  #informatik_logo {
+    position: absolute ;
+    right: 130px ;
+    top: 4px ;
+  }
+  
+  #tum_logo {
+    position: absolute ;
+    right: 4px ;
+    top: 4px ;
+  }
+  
+  #footer {
+    margin-bottom: 0px;
+  }
+  
+  #footer p {
+    margin-bottom: 0px;
+  }
+  
+  #navigation {
+    font-variant: small-caps ;
+  
+    margin-top: 0px ;
+    margin-bottom: 0px ;
+    background: #0065bd ;           
+  }
+  
+  #navigation ul {
+    margin-top: 0px ;
+    margin-right: 0px ;
+    margin-bottom: 0px ;
+    
+    padding: 0px ;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    display: block ;
+    height: 2em ;
+  }
+  
+  #navigation ul li {
+    float: left ;
+    list-style: none inside;
+    
+    margin: 0px ;
+    padding: 0px ;
+    border: 0px ;
+  
+  }
+  
+  #navigation ul li:hover {
+    background-color: black;
+  }
+  
+  #navigation a {
+    display: block ;
+    line-height: 2em ;
+    width: 100px ;
+  
+    color: white ;
+    text-align: center ;
+    text-decoration: none ;
+  }
+  
+  .news ul li {
+    margin-bottom: 20px ;
+  }
+  
+  .address {
+    float: left ;
+    width: 320px ;
+  }
+  
+  ul.people {
+    display: block ;
+    overflow: hidden ;
+    border-bottom: 1px solid black ;
+    padding: 0px ;
+  }
+  
+  ul.people li {
+    display: block ;
+    float: left ;
+    padding: 5px ;
+    margin: 5px ;
+    width: 260px ;
+    height: 150px ;
+    
+    border: 1px solid black;
+  }
+  
+  ul.people li a {
+    display: block ;
+    
+    width: 260px ;
+    height: 150px ;
+    padding: 0px ;
+    margin: 0px ;
+  }
+  
+  ul.people li img {
+    display: block ;
+    float: left ;
+    margin-right: 5px ;
+  }
+  
+  ul.people li .noimage {
+    display: block ;
+    float: left ;
+    width: 120px ;
+    height: 150px ;
+    margin: 0px ;
+    padding: 0px ;
+    margin-right: 5px ;
+    background-color: lightgrey ;
+  }
+  
+  #content {
+    overflow: hidden ;
+    border-bottom: 1px solid black ;
+  }
+  
+  #content > p {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  
+  #content > pre {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  
+  #content > h2 {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  
+  #content > h3 {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  
+  #content > dl {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  
+  #content > ul {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  #content > table {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  
+  
+  #content > div {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+  
+  #content > div.left {
+    width: 380px ;
+    float: left ;
+  }
+  
+  #content > div.right {
+    width: 380px ;
+    float: right ;
+  }
+  
+  #content > div#group-photo {
+    clear: both ;
+    float: none ;
+    padding: 0px ;
+    width: 960px ;
+  }
+  
+  #group-photo p {
+    margin: 0px ;
+  }
+  
+  #content h2 {
+    border-bottom: 1px solid black ;
+  }
+  
+  .teaching dd a {
+    font-weight: bold ;
+  }
+  
+  .teaching li a {
+    font-weight: bold ;
+  }
+  
+  .teaching dl {
+  }
+  
+  .teaching dt {
+    float: left ;
+    padding-left: 1em ;
+  }
+  
+  .teaching dd:before {
+    content: ": " ;
+  }
+  
+  .teaching dd {
+    
+  }
+  
+  @media print {
+  
+    #navigation {
+      display: none;
+    }
+    
+    #footer {
+      position: fixed;
+      bottom: 0;
+    }
+  
+    #footer a {
+      display: none;
+    }
+    
+    #tum_logo {
+      display: none;
+    }
+  
+    #informatik_logo {
+      display: none;
+    }
+  
+    #isabelle_logo {
+      position: absolute ;
+      right: 4px ;
+      top: 4px ;
+    }
+  
+    #content {
+      border-bottom: 0px solid black ;
+    }
+  
+  }
+  
+  #header h1 a {
+    color: black;
+  }
+  
+  #navigation ul {
+    height: auto;
+  }
+  
+  #navigation ul li {
+    padding: 0 4px;
+    float: none;
+    display: inline-block;
+  }
+  
+  #navigation ul li a {
+    display: unset;
+  }
+  
+  @media screen and (max-width: 960px) {
+    body {
+      width: auto;
+    }
+  }
+  
+  @media screen and (max-width: 460px) {
+    #header h1 {
+      margin-right: 0;
+    }
+  
+    #header #isabelle_logo,
+    #header #informatik_logo,
+    #header #tum_logo {
+      position: unset;
+    }
+  }
+  
+  
