@@ -5,11 +5,9 @@
     <title>Funktionale Programmierung und Verifikation (IN0003), WS 2019/20</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/codemirror-cyp-fpv/assets/style.css" type="text/css" rel="stylesheet">
+    <link href="assets/style.css" type="text/css" rel="stylesheet">
     <link href="https://www21.in.tum.de/logo/favicon.ico" type="image/icon" rel="icon">
-    <script src="/codemirror-cyp-fpv/assets/codemirror/lib/codemirror.js"></script>
-    <link rel="stylesheet" href="/codemirror-cyp-fpv/assets/codemirror/lib/codemirror.css">
-    <script src="/codemirror-cyp-fpv/assets/codemirror/addon/mode/simple.js"></script>
+    <link rel="stylesheet" href="assets/codemirror/lib/codemirror.css">
     <style type="text/css">
         td {text-align: center;}
     </style>
@@ -40,66 +38,11 @@
     </div>
     <div id="content" class="teaching">
         <h3>Eingabe</h3>
-        <form style="margin: 0 30px;" action="/web/proof" method="get" enctype="multipart/form-data">
-            <p>Beweis (cprf):</p><textarea id="cprf" name="cprf" accept-charset="UTF-8" rows="20" cols="80"></textarea>
+        <form style="margin: 0 30px;" action="/web/proof" method="post" enctype="multipart/form-data">
+            <p>Beweis (cprf):</p><textarea id="cprf" name="cprf" accept-charset="UTF-8"></textarea>
             <script>
                 function loadCthy(url) {$.get(url, {}, function(d) {$('#cthy').val(d)})}
-
-                CodeMirror.defineSimpleMode('cyprf', {
-                start: [
-                    {regex: /^(Proof by extensionality with)/i,
-                    token: ["keyword", null, "variable-2"], indent: true},
-                    {regex: /^(Proof by case analysis on)/i,
-                    token: ["keyword", null], indent: true},
-                    {regex: /^(Proof by induction on)/i,
-                    token: ["keyword", null], indent: true},
-                    {regex: /(?:Proof)\w*$/i,
-                    token: "keyword", indent: true},
-                    {regex: /(?:To show|Lemma)\b/i,
-                    token: "keyword"},
-                    {regex: /(?:Case)\b/i,
-                    token: "keyword", indent: true},
-                    {regex: /(?:IH|forall|For|Fix|Assume|Then|Show|Assumption)\b/,
-                    token: "keyword"},
-                    {regex: /(?:generalizing|arbitrary|fixed)\b/,
-                    token: "keyword"},
-                    {regex: /(?:def|IH)\b/,
-                    token: "keyword"},
-                    {regex: /True|False|List|Bool/, token: "atom"},
-                    {regex: /0x[a-f\d]+|[-+]?(?:\.\d+|\d+\.?\d*)(?:e[-+]?\d+)?/i,
-                    token: "number"},
-                    {regex: /(\(by .*\))(.*\.=\.)/, token: ["variable-3", null]},
-                    {regex: /--.*/, token: "comment"},
-                    {regex: /\/(?:[^\\]|\\.)*?\//, token: "variable-3"},
-                    {regex: /\{-/, token: "comment", next: "comment"},
-                    {regex: /\.=\./, token: "operator"},
-                    {regex: /[\{\[\(]/, indent: true},
-                    {regex: /QED/, token: "keyword", dedent: true},
-                    {regex: /[a-z$][\w$]*/, token: "variable"},
-                ],
-                comment: [
-                    {regex: /.*-\}/, token: "comment", next: "start"},
-                    {regex: /.*/, token: "comment"}
-                ],
-                meta: {
-                    dontIndentStates: ["comment"],
-                    lineComment: "--"
-                }
-                });
-
-                const config = {
-                    lineNumbers: true,
-                    mode: 'cyprf',
-                    extraKeys: {"Tab": cm => cm.replaceSelection("    " , "end")},
-                    electricChars: true,
-                    indentUnit: 4
-                }
-
-                const cprf = CodeMirror.fromTextArea(document.getElementById('cprf'), config);
             </script>
-            <style>
-                .CodeMirror { border: 1px solid lightgrey;}
-            </style>
             <p>Hintergrundtheorie (cthy):</p>
             <ul>
                 <li><a href="javascript:loadCthy(&#39;/web/proof/cthys/T7.1&#39;);">T7.1: filter p . filter p .=. filter p</a></li>
@@ -112,17 +55,19 @@
                 <li><a href="javascript:loadCthy(&#39;/web/proof/cthys/H5.2&#39;);">H5.2:</a></li>
                 <li><a href="javascript:loadCthy(&#39;/web/proof/cthys/H5.1&#39;);">H5.1</a></li>
             </ul><textarea name="cthy" id="cthy" accept-charset="UTF-8" rows="20" cols="80"></textarea><input style="display: block;" type="submit" value="Beweis prüfen">
-            <script>
-                const cthy = CodeMirror.fromTextArea(document.getElementById('cthy'), config);
-            </script>
             <p>Die Beweise werden mit dem Tool <a href="https://github.com/noschinl/cyp">Cyp</a> getestet</p>
         </form>
     </div>
     <div class="hr">
         <hr>
     </div>
-    <script src="/codemirror-cyp-fpv/assets/jquery-2.1.1.min.js"></script>
-    <script src="/codemirror-cyp-fpv/assets/jQuery.MultiFile.min.js"></script>
+
+    <script src="assets/codemirror/lib/codemirror.js"></script>
+    <script src="assets/codemirror/addon/mode/simple.js"></script>
+    <script src="assets/cyp.js"></script>
+    <script src="assets/proof.js"></script>
+    <script src="assets/jquery-2.1.1.min.js"></script>
+    <script src="assets/jQuery.MultiFile.min.js"></script>
 </body>
 
 </html>
