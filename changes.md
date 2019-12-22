@@ -9,6 +9,8 @@
     - in `<form>`
         - changed `style="margin:..."` to add a margin to the right side too
         - added the ids `cprf` and `cthy` to the respective textareas
+    - in `loadCthy(url)`
+        - changed the place that the cthy is inserted to
     - at the end of `<body>`
         - added 4 script tags. The order is important
 

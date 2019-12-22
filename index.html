@@ -41,7 +41,7 @@
         <form style="margin: 0 30px;" action="/web/proof" method="post" enctype="multipart/form-data">
             <p>Beweis (cprf):</p><textarea id="cprf" name="cprf" accept-charset="UTF-8"></textarea>
             <script>
-                function loadCthy(url) {$.get(url, {}, function(d) {$('#cthy').val(d)})}
+                function loadCthy(url) {$.get(url, {}, function(d) {cthy.setValue(d)})}
             </script>
             <p>Hintergrundtheorie (cthy):</p>
             <ul>
