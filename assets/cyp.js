@@ -27,8 +27,8 @@ CodeMirror.defineSimpleMode('cyprf', {
         {regex: /\{-/, token: "comment", next: "comment"},
         {regex: /\.=\./, token: "operator"},
         {regex: /[\{\[\(]/, indent: true},
-        {regex: /[\}\]\)]/, dedent: true},
-        {regex: /QED/, token: "keyword", dedent: true},
+        {regex: /[\}\]\)]/, dedent: true, dedentIfLineStart: true},
+        {regex: /QED/, token: "keyword", dedent: true, dedentIfLineStart: true},
         {regex: /[a-z$][\w$]*/, token: "variable"},
     ],
     steps: [
@@ -41,6 +41,11 @@ CodeMirror.defineSimpleMode('cyprf', {
     ],
     meta: {
         dontIndentStates: ["steps", "comment"],
-        lineComment: "--"
+        lineComment: "--",
+        electricInput: /(QED)|[\}\]\)]/
     }
 });
+
+CodeMirror.modes['cyprf'].electricInput = {
+    test: (a) => {console.log(a)}
+}
