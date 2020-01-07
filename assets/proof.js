@@ -11,6 +11,6 @@ window.onload = () => {
         height: 'auto'
     }
 
-    CodeMirror.fromTextArea(document.getElementById('cprf'), config);
-    CodeMirror.fromTextArea(document.getElementById('cthy'), config);
+    cprf = CodeMirror.fromTextArea(document.getElementById('cprf'), config);
+    cthy = CodeMirror.fromTextArea(document.getElementById('cthy'), config);
 };
